@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Colorido</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,
+                red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: arcoiris 10s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        @keyframes arcoiris {
+            0% {background-position: left;}
+            100% {background-position: right;}
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 360px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .campo {
+            border: 2px solid transparent;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, red, orange, yellow, green, blue, violet) border-box;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .botoes input {
+            width: 48%;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .enviar {
+            background: linear-gradient(45deg, green, blue);
+        }
+
+        .limpar {
+            background: linear-gradient(45deg, red, orange);
+        }
+
+        .enviar:hover {
+            opacity: 0.9;
+        }
+
+        .limpar:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formulário 🌈</h2>
+
+        <form>
+
+            <div class="campo">
+                <label>Nome:</label>
+                <input type="text" name="nome">
+            </div>
+
+            <div class="campo">
+                <label>Email:</label>
+                <input type="email" name="email">
+            </div>
+
+            <div class="campo">
+                <label>Email Pater:</label>
+                <input type="email" name="email_pater">
+            </div>
+
+            <div class="campo">
+                <label>Email Pessoal:</label>
+                <input type="email" name="email_pessoal">
+            </div>
+
+            <div class="campo">
+                <label>Senha:</label>
+                <input type="password" name="senha">
+            </div>
+
+            <div class="campo">
+                <label>Idade:</label>
+                <input type="number" name="idade">
+            </div>
+
+            <div class="campo">
+                <label>Deixe um comentário:</label>
+                <textarea rows="3" name="comentario"></textarea>
+            </div>
+
+            <div class="campo">
+                <label>Opções:</label>
+                <input type="checkbox"> Opção 1<br>
+                <input type="checkbox"> Opção 2<br>
+                <input type="checkbox"> Opção 3
+            </div>
+
+            <div class="campo">
+                <label>Esporte favorito:</label>
+                <select name="esporte">
+                    <option>Selecione</option>
+                    <option>Futebol</option>
+                    <option>Basquete</option>
+                    <option>Vôlei</option>
+                    <option>Natação</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Escolha uma cor:</label>
+                <input type="color" name="cor">
+            </div>
+
+            <div class="campo">
+                <label>Selecionar arquivo:</label>
+                <input type="file" name="arquivo">
+            </div>
+
+            <div class="campo">
+                <label>Data:</label>
+                <input type="date" name="data">
+            </div>
+
+            <div class="campo">
+                <label>Hora:</label>
+                <input type="time" name="hora">
+            </div>
+
+            <div class="botoes">
+                <input type="submit" value="Enviar" class="enviar">
+                <input type="reset" value="Limpar" class="limpar">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
